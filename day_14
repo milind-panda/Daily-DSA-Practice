@@ -1,0 +1,14 @@
+class Solution:
+	def twoSum(self, arr, target):
+		# code here
+		seen = set()
+
+        for num in arr:
+            required = target - num
+
+            if required in seen:
+                return True
+
+            seen.add(num)
+
+        return False
